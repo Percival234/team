@@ -75,3 +75,7 @@ function addFeature1() {
 function addFeature2() {
   // add feature 2
 }
+
+function addFeature3() {
+  // add feature 3
+}
