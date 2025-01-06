@@ -71,3 +71,7 @@ car2.drive();
 function addFeature1() {
   // add feature 1
 }
+
+function addFeature2() {
+  // add feature 2
+}
