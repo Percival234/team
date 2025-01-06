@@ -67,5 +67,3 @@ const car2 = factory.createCar('Audi', 'green');
 
 car1.drive();
 car2.drive();
-
-console.log('hello');
