@@ -1,33 +1,24 @@
-function counter(a = 0) {
-  let count = a;
+class Cart {
+  constructor() {
+    if (Cart.instance) {
+      return Cart.instance;
+    }
 
-  return (b) => {
-    count += b;
-    return count;
-  };
+    Cart.instance = this;
+    this.products = [];
+  }
+
+  addProduct(product) {
+    this.products.push(product);
+  }
 }
 
-const counter1 = counter();
+const cart1 = new Cart();
+const cart2 = new Cart();
 
-// console.log(counter1(3));
-// console.log(counter1(3));
-// console.log(counter1(3));
+cart1.addProduct('tomato');
+cart1.addProduct('apple');
+cart2.addProduct('juice');
 
-const object = {
-  name: 'Bob',
-  age: 30,
-};
-
-const arr = [1, 2, 3];
-
-for (const key in object) {
-  const element = object[key];
-  console.log(element);
-}
-
-for (const [key, value] of Object.entries(object)) {
-  console.log(key, value);
-}
-
-// log 2 (8) = y
-// 2^y =  8
+console.log(cart1.products);
+console.log(cart2.products);
