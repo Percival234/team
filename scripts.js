@@ -22,3 +22,48 @@ cart2.addProduct('juice');
 
 console.log(cart1.products);
 console.log(cart2.products);
+
+class Car {
+  constructor(color) {
+    this.color = color;
+  }
+  drive() {
+    console.log('drive');
+  }
+}
+
+class BMW extends Car {
+  constructor(color) {
+    super(color);
+    this.type = 'BMW';
+  }
+}
+
+class Audi extends Car {
+  constructor(color) {
+    super(color);
+    this.type = 'Audi';
+  }
+}
+
+class CarFactory {
+  constructor() {}
+  createCar(type, color) {
+    switch (type) {
+      case 'BMW':
+        return new BMW(color);
+      case 'Audi':
+        return new Audi(color);
+      default:
+        throw Error('No car with type ' + type);
+    }
+  }
+}
+
+const factory = new CarFactory();
+
+const car1 = factory.createCar('BMW', 'red');
+const car2 = factory.createCar('Audi', 'green');
+
+car1.drive();
+car2.drive();
