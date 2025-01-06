@@ -67,3 +67,7 @@ const car2 = factory.createCar('Audi', 'green');
 
 car1.drive();
 car2.drive();
+
+function addFeature1() {
+  // add feature 1
+}
